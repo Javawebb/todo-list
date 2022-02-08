@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>ToDo List</title>
+</head>
+<body>
+    <main class="main">
+        <div class="main-img"></div>
+        <h1 class="main-title">todo</h1>
+
+        <form class="form">
+            <button class="form-btn">+</button>
+            <input type="text" class="form-input" placeholder="create a new todo">
+        </form>
+        <div class="wrapper">
+            <ul class="todos">
+                <!-- <li class="todos-todo">
+                    <button class="todos-todo__btn"><span class="icon">&#10003;</span></button>
+                    <span class="todos-todo__title">React.Js</span>
+                </li> -->
+            </ul>   
+            <footer class="footer">
+                <span class="footer-info">5 items left</span>
+                <div class="footer-btns">
+                    <button class="all active-btn">All</button>
+                    <button class="active">Active</button>
+                    <button class="complete">Completed</button>
+                </div>
+
+                <button class="clear">Clear Completed</button>
+            </footer>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

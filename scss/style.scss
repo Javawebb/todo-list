@@ -1,0 +1,181 @@
+$bg-color: #171723;
+$primary: #25273c;
+$blue-border: #355bc6;
+$text-color: #c7c7c7;
+$color: #5a5a5a;
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $primary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue-border;
+  border-radius: 30px ;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+.main {
+  height: 100vh;
+  background-color: $bg-color;
+  &-img {
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    filter: alpha(opacity=80) black;
+    -khtml-opacity: 0.8;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 32%;
+    background-image: url(../images/nasa-1lfI7wkGWZ4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+  &-title {
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    padding: 60px 0;
+    font-weight: 275;
+    letter-spacing: 20px;
+  }
+}
+
+.form {
+  width: 600px;
+  margin: 0 auto;
+  background: $primary;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  &-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background: none;
+    border: 1px solid #5a5a5a;
+    color: $color;
+    line-height: 0;
+    cursor: pointer;
+    transition: 500ms;
+    
+    &:hover {
+      border: 1px solid $blue-border;
+      color: $blue-border;
+      box-shadow: 0 0 5px $blue-border;box-shadow: 0 0 5px $blue-border;
+    }
+  }
+  &-input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: $text-color;
+  }
+}
+.wrapper {
+  width: 600px;
+  margin: 50px auto 0 auto;
+  max-height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+.todos {
+  &-todo {
+    padding: 20px;
+    border-bottom: 1px solid $color;
+    display: flex;
+    align-items: center;
+    background: $primary;
+    gap: 20px;
+    &__btn {
+      width: 26px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: none;
+      border: 1px solid $color;
+      color: $color;
+      color: transparent;
+    }
+    &__title {
+      font-size: 18px;
+      color: $color;
+      font-weight: 300;
+    }
+  }
+  .completed {
+    .todos-todo__btn {
+      border-color: $blue-border;
+      color: $blue-border;
+    }
+    .todos-todo__title {
+      color: $color;
+      text-decoration: line-through;
+    }
+  }
+}
+.footer{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  &-info{
+    color: $color;
+  }
+  &-btns{
+    display: flex;
+    gap: 15px;
+    button{
+      background: none;
+      border: none;
+      color: $color;
+      font-size: 16px;
+      cursor: pointer;
+      &.active-btn{
+        color: $blue-border;
+        text-shadow: 0 0 5px $blue-border;
+      }
+    }
+  }
+}
+.clear{
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: $color;
+  transition: 500ms;
+}
+.clear:hover{
+  color: $blue-border;
+  text-shadow: 0 0 5px $blue-border;
+}
+h1,
+form,
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
